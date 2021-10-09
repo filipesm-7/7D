@@ -3,16 +3,15 @@
 require_once 'Classes/Rectangle.php';
 require_once 'Classes/Circle.php';
 
-$obj = new Classes\Rectangle(4, 2);
+$rectangle = new Classes\Rectangle(4, 2);
+printShapeDetails($rectangle);
 
-echo sprintf('%s area: %d', $obj->name, $obj->getArea());
-echo "\n";
-echo sprintf('%s properties: %s', $obj->name, json_encode($obj->getProps()));
-echo "\n";
+$circle = new Classes\Circle(4, 2, 3);
+printShapeDetails($circle);
 
-$obj = new Classes\Circle(4, 2, 3);
-
-echo sprintf('%s area: %d', $obj->name, $obj->getArea());
-echo "\n";
-echo sprintf('%s properties: %s', $obj->name, json_encode($obj->getProps()));
-echo "\n";
+function printShapeDetails(Classes\Shape $shape): void {
+    echo sprintf('%s area: %d', $shape->name, $shape->getArea());
+    echo "\n";
+    echo sprintf('%s properties: %s', $shape->name, json_encode($shape->getProps()));
+    echo "\n";
+}
