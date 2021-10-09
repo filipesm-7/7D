@@ -44,6 +44,7 @@ abstract class Shape
     public function __construct(float $width, float $length) {
         $this->width = $width;
         $this->length = $length;
+        $this->name = (new \ReflectionClass($this))->getShortName();
         $this->id = uniqid();
     }
 
