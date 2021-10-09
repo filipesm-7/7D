@@ -32,6 +32,13 @@ class Circle extends Shape
     }
 
     /**
+     * @return int
+     */
+    public function generateId(): void {
+        return time();
+    }
+
+    /**
      * @return float
      */
     public function getArea(): float {

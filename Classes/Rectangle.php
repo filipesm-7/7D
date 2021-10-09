@@ -19,4 +19,11 @@ class Rectangle extends Shape
     public function getArea(): float {
         return $this->width * $this->length;
     }
+
+    /**
+     * @return string
+     */
+    public function generateId(): void {
+        return uniqid();
+    }
 }
