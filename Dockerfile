@@ -2,9 +2,9 @@
 #specify base image
 FROM php:7.4-cli
 
-#update apt and install tools
-RUN apt-get update && apt-get install -y \
-    vim
+#copy filles and set working directory
+COPY . /usr/src/7d
+WORKDIR /usr/src/7d
 
-#copy files to server root
-COPY ./Classes /var/www/html
+#run index.php
+CMD [ "php", "./index.php" ]
