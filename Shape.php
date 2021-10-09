@@ -60,7 +60,7 @@ abstract class Shape
     /**
      * @return mixed
      */
-    abstract protected function getArea();
+    abstract public function getArea();
 
     /**
      * @return mixed
