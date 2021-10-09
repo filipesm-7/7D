@@ -34,7 +34,7 @@ class Circle extends Shape
     /**
      * @return int
      */
-    public function generateId(): void {
+    public function generateId(): int {
         return time();
     }
 

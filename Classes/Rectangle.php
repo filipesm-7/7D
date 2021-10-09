@@ -23,7 +23,7 @@ class Rectangle extends Shape
     /**
      * @return string
      */
-    public function generateId(): void {
+    public function generateId(): string {
         return uniqid();
     }
 }
