@@ -31,9 +31,10 @@ abstract class Shape
     const X = 1;
 
     /**
-     * @var string
+     * changed visibility to allow custom implementation on child classes
+     * @var mixed
      */
-    private $id;
+    protected $id;
 
     /**
      * Shape constructor
@@ -45,8 +46,13 @@ abstract class Shape
         $this->width = $width;
         $this->length = $length;
         $this->name = (new \ReflectionClass($this))->getShortName();
-        $this->id = uniqid();
+        $this->id = $this->generateId();
     }
+
+    /**
+     * @return mixed
+     */
+    abstract public function generateId();
 
     /**
      * @return string
