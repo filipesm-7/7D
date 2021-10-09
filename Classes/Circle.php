@@ -1,7 +1,7 @@
 <?php
 
 namespace Classes;
-require_once './Shape.php';
+require_once 'Shape.php';
 
 /**
  * Class Circle
@@ -39,6 +39,8 @@ class Circle extends Shape
     }
 
     /**
+     * Override parent method with custom props
+     *
      * @return mixed
      */
     public function getProps() {
