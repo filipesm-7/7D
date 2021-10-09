@@ -63,7 +63,7 @@ function printOptionsMenu(): void {
 }
 
 function printShapeDetails(Classes\Shape $shape): void {
-    echo sprintf('%s area: %F', $shape->name, $shape->getArea());
+    echo sprintf('%s area: %s', $shape->name, number_format($shape->getArea(), 2));
     echo "\n";
     echo sprintf('%s properties: %s', $shape->name, json_encode($shape->getProps()));
     echo "\n";
