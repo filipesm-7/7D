@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Namespaces cannot me taken full advantage of without Composer autoloader
+ * Namespaces cannot be taken full advantage of without Composer autoloader
  */
 namespace Classes;
 
