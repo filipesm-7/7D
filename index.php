@@ -3,40 +3,44 @@
 require_once 'Classes/Rectangle.php';
 require_once 'Classes/Circle.php';
 
-echo "###########################################";
-echo "#           7D Shape Challenge            #";
-echo "###########################################";
-echo "\n\n";
+main();
 
-while (true) {
-    printOptionsMenu();
-    $option = readline('Select your option: ');
+function main(): void {
+    echo "###########################################";
+    echo "#           7D Shape Challenge            #";
+    echo "###########################################";
+    echo "\n\n";
 
-    switch($option) {
-        case 1: {
-            $shapeData = readShapeData('rectangle');
-            $rectangle = new Classes\Rectangle($shapeData['width'], $shapeData['length']);
-            printShapeDetails($rectangle);
+    while (true) {
+        printOptionsMenu();
+        $option = readline('Select your option: ');
 
-            break;
-        }
-        case 2: {
-            $shapeName = 'circle';
-            $shapeData = readShapeData($shapeName);
-            $radius = readline(sprintf('Please specify %s radius: ', $shapeName));
-            $circle = new Classes\Circle($shapeData['width'], $shapeData['length'], $radius);
-            printShapeDetails($circle);
+        switch($option) {
+            case 1: {
+                $shapeData = readShapeData('rectangle');
+                $rectangle = new Classes\Rectangle($shapeData['width'], $shapeData['length']);
+                printShapeDetails($rectangle);
 
-            break;
+                break;
+            }
+            case 2: {
+                $shapeName = 'circle';
+                $shapeData = readShapeData($shapeName);
+                $radius = readline(sprintf('Please specify %s radius: ', $shapeName));
+                $circle = new Classes\Circle($shapeData['width'], $shapeData['length'], $radius);
+                printShapeDetails($circle);
+
+                break;
+            }
+            case 3: {
+                exit("Closing application...\n");
+            }
+            default: {
+                echo "Please select a valid option!\n";
+            }
         }
-        case 3: {
-            exit("Closing application...\n");
-        }
-        default: {
-            echo "Please select a valid option!\n";
-        }
+        echo "\n###########################################\n\n";
     }
-    echo "\n###########################################\n\n";
 }
 
 function readShapeData($shapeName) {
