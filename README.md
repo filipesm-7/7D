@@ -8,7 +8,7 @@ Docker - https://www.docker.com/
 
 ## Setup
 
-Build image: ```docker build . -t 7d-shape-challenge```
+Build image: ```docker build . -t 7d-shape-challenger```
 
 Run: ```docker run -it --rm --name 7d-shapes 7d-shape-challenger```
 
