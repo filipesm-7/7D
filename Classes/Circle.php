@@ -33,7 +33,7 @@ abstract class Circle extends Shape
      * @return float
      */
     public function getArea(): float {
-        echo pi() * pow($this->radius, 2);
+        return pi() * pow($this->radius, 2);
     }
 
     /**
