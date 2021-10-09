@@ -4,7 +4,7 @@
 /**
  * Class Circle
  */
-abstract class Circle extends Shape
+class Circle extends Shape
 {
     /**
      * @var int

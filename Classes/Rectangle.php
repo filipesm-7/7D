@@ -4,7 +4,7 @@
 /**
  * Class Rectangle
  */
-abstract class Rectangle extends Shape
+class Rectangle extends Shape
 {
     /**
      * @var int
