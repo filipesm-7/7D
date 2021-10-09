@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Namespaces cannot me taken full advantage of without Composer autoloader
+ */
+namespace Classes;
 
 /**
  * Class Shape

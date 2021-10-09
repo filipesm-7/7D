@@ -1,5 +1,7 @@
 <?php
 
+namespace Classes;
+require_once './Shape.php';
 
 /**
  * Class Circle
